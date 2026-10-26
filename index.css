@@ -1,0 +1,232 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+}
+:root{
+    --cor-para-enfase: #000000;
+    --branco: #ffffff;
+    --azul: #2563eb;
+    --cor-de-entrada: #16a34a;
+    --cor-de-saida: #dc2626;
+}
+body{
+    background-color: #f8fafc;
+    display: flex;
+    justify-content: center;
+}
+/* corpo da pagina */
+.container{
+    max-width: 1000px;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+/* Cabeçalho */
+header{
+    text-align: center;
+    padding: 1rem 0rem;
+}
+h1{
+    color: var(--azul);
+    font-weight: bold;
+    margin-bottom: .5rem;
+}
+/* Indicadores */
+.indicadores{
+    display: flex;
+    justify-content: space-between;
+    /* padding: 0 10rem; */
+}
+.indicadores div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--branco);
+    border: 1px solid #64748b63;
+    border-radius: .5rem;
+    width: 17rem;
+    height: 8rem;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+}
+.indicadores h3{
+    color: #64748b;
+}
+#i-entrada,#i-saida,#i-total{
+    font-weight: bold;
+    font-size: 2rem;
+}
+#i-entrada{
+    color: var(--cor-de-entrada);
+}
+#i-saida{
+    color: var(--cor-de-saida);
+}
+#i-total{
+    color: var(--cor-para-enfase);
+}
+/* Conteúdo principal */
+.conteudo-principal{
+    display: flex;
+    gap: 2rem;
+}
+aside,main{
+    background-color: var(--branco);
+    border: 1px solid #64748b63;
+    height: 20rem;
+    border-radius: .5rem;
+}
+aside{
+    flex: 1;
+}
+form{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 1rem;
+    /* border: 1px solid; */
+}
+form h2{
+    margin-bottom: .5rem;
+}
+form div{
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+input,select{
+    padding: .5rem;
+}
+button{
+    width: 100%;
+    padding: .8rem;
+    background-color: var(--azul);
+    border:none;
+    border-radius: .2rem;
+    color: var(--branco);
+    font-weight: bold;
+    margin-top: .5rem;
+}
+main{
+    flex: 2;
+    padding: 1rem;
+}
+#lista-de-transacoes{
+    list-style: none;
+    text-align: center;
+    margin-top: 1rem;
+    color: #64748b;
+    max-height: 15.5rem;
+    overflow-x: auto;
+    /* border: 1px solid; */
+}
+.estilos-transacao{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0px;
+    border-left: 8px solid;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    border-top: 1px solid;
+    border-right: 1px solid;
+    border-bottom: 1px solid;
+    border-radius: .2rem;
+    background-color: #f8fafc;
+}
+.cor-da-borda-de-entrada{
+    border-left-color: var(--cor-de-entrada);
+}
+.cor-da-borda-de-saida{
+    border-left-color: var(--cor-de-saida);
+}
+.estilos-transacao div{
+    /* border: 1px solid; */
+    width: 30%;
+    flex: 1;
+}
+.estilos-transacao div:first-child{
+    display: flex;
+    flex-direction: column;
+}
+.estilos-transacao div:first-child span{
+    font-size: .8rem;
+}
+.estilos-transacao h4{
+    color: var(--cor-para-enfase);
+    font-weight: 600;
+}
+.estilos-transacao div:last-child{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 1rem;
+    /* border: 1px solid black; */
+}
+.estilos-transacao div button{
+    width: 45%;
+    height: 2rem;
+    margin: 0;
+    padding: 0;
+}
+.cor-botao-excluir{
+    background-color: var(--cor-de-saida);
+}
+
+
+@media(min-width:480px){
+ .container{
+    width: 100%;
+    padding: .5rem;
+ }
+ .indicadores div{
+    padding: 1rem;
+    width: 9rem;
+    height: 6rem;
+ }
+ aside, main{
+    height: auto;
+ }
+ #i-entrada, #i-saida, #i-total{
+    font-size: 1.5rem;
+ }
+}
+@media(min-width:640px){
+    .indicadores div{
+        width: 12.5rem;
+    }
+    .conteudo-principal{
+       gap: 1rem;
+    }
+    aside, main{
+        flex: 1;
+    }
+}
+@media(min-width:768px){
+    .indicadores div{
+        width: 15rem;
+    }
+    body{
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+    }
+    input,select {
+        padding: .8rem;
+    }
+}
+@media(min-width:1000px){
+    .indicadores div{
+        width: 19.5rem;
+    }
+    aside{
+        flex: 1;
+    }
+    main{
+        flex: 2;
+    }
+}

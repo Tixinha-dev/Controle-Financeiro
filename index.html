@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <script src="./index.js" defer></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Controle Financeiro</h1>
+            <p>Gerencie suas entradas e saídas</p>
+        </header>
+        <div class="indicadores">
+            <div>
+                <h3>Entrada</h3>
+                <p id="i-entrada">R$ 0,00</p>
+            </div>
+            <div>
+                <h3>Saídas</h3>
+                <p id="i-saida">R$ 0,00</p>
+            </div>
+            <div>
+                <h3>Saldo Total</h3>
+                <p id="i-total">R$ 0,00</p>
+            </div>
+        </div>
+        <div class="conteudo-principal">
+            <aside>
+                <form action="">
+                    <h2>Nova transação</h2>
+                    <div>
+                        <label for="descricao">Descrição</label>
+                        <input type="text" name="descricao" id="descricao" placeholder="Ex: Salário, mercado..." required>
+                    </div>
+                    <div>
+                    <label for="valor">Valor(R$)</label>
+                    <input type="number" name="valor" id="valor" placeholder="0,00" required>
+                    </div>
+                    <div>
+                        <label for="tipo">Tipo</label>
+                        <select name="tipo" id="tipo" required>
+                            <option value="entrada">Entrada</option>
+                            <option value="saida">Saída</option>
+                        </select>
+                    </div>
+                    <div>
+                        <button type="submit">Adicionar</button>
+                    </div>
+                </form>
+            </aside>
+            <main>
+                <h2>Transações</h2>
+                <ul id="lista-de-transacoes">
+                    <li id="mensagem-padrao">Nenhuma transação cadastrada</li>
+                    <!-- <li class="teste">
+                        <div>
+                            <p>Descrição</p>
+                        </div>
+                        <div>0,00</div>
+                        <div>
+                            <span>editar</span>
+                            <span>excluir</span>
+                        </div>
+                    </li> -->
+                </ul>
+            </main>
+        </div>
+    </div>
+</body>
+</html>
