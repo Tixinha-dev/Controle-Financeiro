@@ -177,7 +177,7 @@ main{
     background-color: var(--cor-de-saida);
 }
 
-@media(min-width:320px){
+@media(min-width:320px and max-width:480px){
      .container{
         width: 100%;
         padding: .5rem;
