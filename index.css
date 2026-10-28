@@ -106,6 +106,7 @@ form h2{
 form div{
     display: flex;
     flex-direction: column;
+    flex: 1 1 auto;
     gap: .5rem;
 }
 input,select{
@@ -213,9 +214,9 @@ main h2{
         width: 100%;
         text-align: center;
     }
-    form div{
+    /* form div{
         flex: 1 1 auto;
-    }
+    } */
     form input,select{
         padding: .3rem;
     }
