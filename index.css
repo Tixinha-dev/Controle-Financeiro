@@ -200,6 +200,7 @@ main h2{
     }
     .conteudo-principal{
         flex-direction: column;
+        justify-content: center;
         gap: 1.5rem;
     }
     aside{
@@ -214,9 +215,6 @@ main h2{
         width: 100%;
         text-align: center;
     }
-    /* form div{
-        flex: 1 1 auto;
-    } */
     form input,select{
         padding: .3rem;
     }
@@ -227,12 +225,5 @@ main h2{
         order: 1;
         text-align: center;
     }
-    /* .indicadores div{
-        height: 5rem;
-    } */
-}
-@media(min-height:800px){
-    .container{
-        justify-content: center;
-    }
+ 
 }
