@@ -11,18 +11,22 @@
     --cor-de-entrada: #16a34a;
     --cor-de-saida: #dc2626;
 }
+
 body{
     background-color: #f8fafc;
     display: flex;
     justify-content: center;
+    /* min-height: 100vh; */
+    min-height: 100vh;
+    border: 1px solid;
 }
 /* corpo da pagina */
 .container{
-    max-width: 1000px;
     width: 70%;
     display: flex;
     flex-direction: column;
     gap: 1.2rem;
+    /* border: 1px solid; */
 }
 /* Cabeçalho */
 header{
@@ -38,6 +42,7 @@ h1{
 .indicadores{
     display: flex;
     justify-content: space-between;
+    /* border: 1px solid; */
     /* padding: 0 10rem; */
 }
 .indicadores div{
@@ -47,17 +52,21 @@ h1{
     background-color: var(--branco);
     border: 1px solid #64748b63;
     border-radius: .5rem;
-    width: 17rem;
-    height: 8rem;
-    padding: 1rem 2rem;
-    font-size: 1.1rem;
+    flex-basis: 18.5rem;
+    flex-shrink: 1;
+    height: 6rem;
+    /* width: 17rem;
+    height: 8rem; */
+    text-align: center;
+    /* padding: 1rem 2rem; */
+    font-size: clamp(1rem,4vw,1.2rem)
 }
 .indicadores h3{
     color: #64748b;
 }
 #i-entrada,#i-saida,#i-total{
     font-weight: bold;
-    font-size: 2rem;
+    font-size: clamp(1rem,5vw,2rem);
 }
 #i-entrada{
     color: var(--cor-de-entrada);
@@ -72,18 +81,18 @@ h1{
 .conteudo-principal{
     display: flex;
     gap: 2rem;
+    /* border: 1px solid; */
 }
 aside,main{
     background-color: var(--branco);
     border: 1px solid #64748b63;
-    height: 20rem;
     border-radius: .5rem;
 }
 aside{
     flex: 1;
 }
 form{
-    height: 100%;
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -92,6 +101,7 @@ form{
 }
 form h2{
     margin-bottom: .5rem;
+    font-size: clamp(1rem,4vh,1.5rem);
 }
 form div{
     display: flex;
@@ -114,6 +124,9 @@ button{
 main{
     flex: 2;
     padding: 1rem;
+}
+main h2{
+    font-size: clamp(1rem,4vh,1.5rem);
 }
 #lista-de-transacoes{
     list-style: none;
@@ -159,6 +172,7 @@ main{
 .estilos-transacao h4{
     color: var(--cor-para-enfase);
     font-weight: 600;
+    
 }
 .estilos-transacao div:last-child{
     display: flex;
@@ -176,82 +190,43 @@ main{
 .cor-botao-excluir{
     background-color: var(--cor-de-saida);
 }
-
-@media(min-width:320px and max-width:480px){
-     .container{
+@media(max-width:425px){
+    .container{
         width: 100%;
-        padding: .5rem;
-     }
-     .indicadores div{
-        width: 6rem;
-        height: 4rem;
-        flex-direction: row;
-        align-items: center;
-        padding: 0;
-        flex-wrap: wrap;
     }
-    form h2,main h2{
-        font-size: 1.2rem;
+    .indicadores{
+        gap: .5rem;
     }
     .conteudo-principal{
         flex-direction: column;
-    }
-    .indicadores h3{
-        font-size: 1rem;
-    }
-    #i-entrada, #i-saida, #i-total{
-        font-size: 1.2rem;
-    }
-}
-@media(min-width:480px){
- .container{
-    width: 100%;
-    padding: .5rem;
- }
- .indicadores div{
-    padding: 1rem;
-    width: 9rem;
-    height: 6rem;
- }
- aside, main{
-    height: auto;
- }
- #i-entrada, #i-saida, #i-total{
-    font-size: 1.5rem;
- }
-}
-@media(min-width:640px){
-    .indicadores div{
-        width: 12.5rem;
-    }
-    .conteudo-principal{
-       gap: 1rem;
-    }
-    aside, main{
-        flex: 1;
-    }
-}
-@media(min-width:768px){
-    .indicadores div{
-        width: 15rem;
-    }
-    body{
-        min-height: 100vh;
-        display: flex;
-        align-items: center;
-    }
-    input,select {
-        padding: .8rem;
-    }
-}
-@media(min-width:1000px){
-    .indicadores div{
-        width: 19.5rem;
+        gap: 1.5rem;
     }
     aside{
-        flex: 1;
+        order: 2;
+    }
+    form{
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: .4rem;
+    }
+    form h2{
+        width: 100%;
+        text-align: center;
+    }
+    form div{
+        flex: 0 1 auto;
+    }
+    form input,select{
+        padding: .3rem;
+    }
+    form div:last-child{
+        flex-basis:100%;
     }
     main{
-        flex: 2;
+        order: 1;
+        text-align: center;
     }
+    /* .indicadores div{
+        height: 5rem;
+    } */
 }
