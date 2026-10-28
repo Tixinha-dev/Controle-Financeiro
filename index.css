@@ -190,7 +190,7 @@ main h2{
 .cor-botao-excluir{
     background-color: var(--cor-de-saida);
 }
-@media(max-width:425px){
+@media(min-width:320px) and (max-width:450px){
     .container{
         width: 100%;
     }
