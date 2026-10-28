@@ -194,13 +194,13 @@ main h2{
 @media(min-width:320px) and (max-width:450px){
     .container{
         width: 100%;
+        justify-content: center;
     }
     .indicadores{
         gap: .5rem;
     }
     .conteudo-principal{
         flex-direction: column;
-        justify-content: center;
         gap: 1.5rem;
     }
     aside{
