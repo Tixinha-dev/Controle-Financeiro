@@ -214,7 +214,7 @@ main h2{
         text-align: center;
     }
     form div{
-        flex: 0 1 auto;
+        flex: 1 1 auto;
     }
     form input,select{
         padding: .3rem;
