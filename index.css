@@ -194,6 +194,7 @@ main h2{
 @media(min-width:320px) and (max-width:450px){
     .container{
         width: 100%;
+        padding: 1rem;
         justify-content: center;
     }
     .indicadores{
@@ -209,7 +210,7 @@ main h2{
     form{
         flex-direction: row;
         flex-wrap: wrap;
-        padding: .4rem;
+        padding: 1rem;
     }
     form h2{
         width: 100%;
